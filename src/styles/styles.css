@@ -23,7 +23,7 @@ body {
 
 .Header a {
   text-decoration: none;
-  color: #01c4e7;
+  color: #00b5cc;
 }
 
 .Main {
@@ -33,23 +33,29 @@ body {
   justify-content: center;
 }
 
+h1 {
+  margin: 0;
+}
+
 .Characters {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
+  margin: 0 100px;
 }
 
 .Characters-inner {
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
+  margin: 0 100px;
 }
 
 .Characters-card {
   text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.733), 1px 3px 8px rgba(39, 44, 49, 0.5);
   border-radius: 5px;
   margin: 0 0 20px 0;
   display: block;
@@ -82,7 +88,7 @@ body {
   color: white;
 }
 
-.Characters-item {
+.Character-item {
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 5px;
@@ -92,10 +98,15 @@ body {
   animation-name: fade;
 }
 
-.Characters-item img {
+.Character-item img {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
+  transition: 0.5s;
+}
+
+.Character-item img:hover {
+  transform: scale(1.1);  
 }
 
 .Character-item h2 {
@@ -107,7 +118,7 @@ body {
   color: #14FFEC;
 }
 
-.Characters-item a {
+.Character-item a {
   text-decoration: none;
 }
 
