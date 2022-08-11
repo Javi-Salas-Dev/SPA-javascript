@@ -4,6 +4,11 @@
   text-decoration: none;
 }
 
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -90,7 +95,7 @@ h1 {
 
 .Character-item {
   text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.733), 1px 3px 8px rgba(39, 44, 49, 0.5);
   border-radius: 5px;
   margin: 0 0 20px 0;
   display: block;
@@ -143,4 +148,40 @@ h1 {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 360px ){
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+    color: #3c484e;
+  }
+
+  .Characters {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1.5rem;
+    grid-row-gap: 1.5em;
+    display: grid;
+    margin: 0 50px;
+  }
+
+  .Character-item {
+    text-decoration: none;
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.733), 1px 3px 8px rgba(39, 44, 49, 0.5);
+    border-radius: 5px;
+    margin: 0 0 20px 0;
+    display: block;
+    animation-duration: 2s;
+    animation-name: fade;
+  }
+
+  .Header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin-bottom: 40px;
+    background-color: black;
+  }
 }
